@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 from setuptools import setup
 
-VERSION = "0.2"
+VERSION = "0.1"
 REPO = "https://github.com/icio/tarnish"
-README = "README.rst"
+README = "README.md"
 
 with open(README) as f:
     long_description = f.read()
@@ -19,6 +19,11 @@ setup(
     py_modules=["tarnish"],
     license="MIT",
     long_description=long_description,
+    entry_points={
+        'console_scripts': [
+            'tarnish = tarnish:main',
+        ],
+    },
     keywords=["tarnfeld", "tarnfeid", "tarn", "can't handle my"],
     classifiers=[],
 )

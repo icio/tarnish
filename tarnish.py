@@ -102,9 +102,13 @@ c:;,'.  'ccll:.......,lllll; .lllllc..lll:. ;lll..,..clllllllll. .:llllll.'..lll
 """
 
 
-if __name__ == "__main__":
+def main():
     prog = ArgumentParser()
     prog.add_argument('--version', action='version',
-                      version='%(prog)s 0.1\n[New skool edition]')
-    args = prog.parse_args()
+                      version='%(prog)s 0.1 [New skool edition]')
+    prog.parse_args()
     cant_handle_my_tarn()
+
+
+if __name__ == "__main__":
+    main()
